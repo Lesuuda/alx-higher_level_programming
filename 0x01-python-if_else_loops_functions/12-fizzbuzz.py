@@ -33,4 +33,4 @@ def fizzbuzz():
 
         else:
 
-            print("{} ".format(number), end="")
+          print("{} ".format(number), end="")
