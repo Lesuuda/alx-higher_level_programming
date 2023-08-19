@@ -5,5 +5,5 @@ if __name__ == "__main__":
     """get the sum of 2 numbers"""
 
     a = 1
-    b =  2
-    print ("{} + {} = {}".format(a, b, add(a, b)))
+    b = 2
+    print("{} + {} = {}".format(a, b, add(a, b)))
