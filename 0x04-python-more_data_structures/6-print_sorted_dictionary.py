@@ -6,6 +6,8 @@ def print_sorted_dictionary(a_dictionary):
     """
     prints a dictionary by ordered keys
     """
+    if not a_dictionary:
+        return
 
     sorted_keys = sorted(a_dictionary.keys())
     for key in sorted_keys:
