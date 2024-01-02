@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """ Defines a square based on 1-square.py"""
 
+
 class Square:
+
     """Defines a square class"""
-    def __init__(self, size=0):
+
+    def __init__(self, size=0, position=(0, 0)):
         """__init__ instatiation
         Attributes:
                   size(int): size of the new square"""
@@ -34,7 +37,9 @@ class Square:
                 len(value) != 2 or
                 not all(isinstance(i, int) for i in value) or
                 any(i < 0 for i in value)):
-            raise TypeError("position must be a tuple of two positive integers")
+            raise TypeError(
+                    "position must be a tuple of two positive integers"
+                    )
         else:
             self.__position = value
 
@@ -49,4 +54,3 @@ class Square:
         else:
             for _ in range(self.size):
                 print('#' * self.size)
-
