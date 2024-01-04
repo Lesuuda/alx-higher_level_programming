@@ -52,3 +52,10 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             perimeter == 0
         return perimeter
+
+    def __str__(self):
+        """returns a string representation of the rectangle"""
+
+        if self.width == 0 or self.height == 0:
+            return ""
+        return "\n".join(['#' * self.width for _ in range(self.height)])
