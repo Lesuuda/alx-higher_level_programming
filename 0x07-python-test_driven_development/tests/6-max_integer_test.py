@@ -38,3 +38,7 @@ class TetstMaxInteger(unittest.TestCase):
     def test_float(self):
         """tests for the max float in a list of ibtegers"""
         self.assertEqual(max_integer([2.2, 2.4, 2.9]), 2.9)
+    
+    def test_max_at_the_beginning(self):
+        """tests for a max integer place in the beginning of a list"""
+        self.assertEqual(max_integer([8, 6, 7]), 8)
