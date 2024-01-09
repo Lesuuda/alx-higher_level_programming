@@ -6,7 +6,7 @@ Square that inherits from Rectangle (9-rectangle.py).
 
 
 class BaseGeometry:
-    """BaseGeometry class"""
+    """BaseGeometry class thainherits from Rectangle and calculates the area"""
 
     def area(self):
         """Raises an Exception with the message 'area() is not implemented'"""
@@ -48,7 +48,7 @@ class Square(Rectangle):
     """Square class inherits from Rectangle"""
 
     def __init__(self, size):
-        """Initialization with size"""
+        """Istantiation  with size. if uses super() to inerit the parent"""
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
