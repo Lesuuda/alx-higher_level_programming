@@ -10,5 +10,6 @@ def append_write(filename="", text=""):
     If the file doesn’t exist, it should be created
     You must use the with statement
     """
-    with open(filename, mode='a', encoding='utf-8'):
+    with open(filename, mode='a', encoding='utf-8') as f:
+        f.write(text)
         return len(text)
