@@ -23,7 +23,6 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-
     @property
     def width(self):
         """getter method for width"""
@@ -83,3 +82,20 @@ class Rectangle(Base):
     def area(self):
         """public method that returns the area of the rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """method to display rectangle instance with character #"""
+        if self.width == 0 or self.height == 0:
+            print("")
+        for _ in range(self.height):
+            print('#' * self.width)
+
+    def __str__(self):
+        """
+        __str__ method so that it returns
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return (
+                f"[Rectangle] ({self.id})"
+                f" {self.x}/{self.y} - {self.width}/{self.height}"
+            )
