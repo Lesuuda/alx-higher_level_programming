@@ -37,3 +37,39 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 2, 3, 4, 12)
         r1.id = 100
         self.assertEqual(r1.id, 100)
+
+    def test_width_negative_value(self):
+        """tets for width negative value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(width=-5, height=10, x=3, y=4, id=12)
+        self.assertIn("width must be > 0", str(context.exception))
+
+    def test_height_nagative_value(self):
+        """tets for height negative value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(5, -10, 3, 4, 12)
+        self.assertIn("height must be > 0", str(context.exception))
+
+    def test_x_nagative_value(self):
+        """tets for x negative value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(5, 10, -3, 4, 12)
+        self.assertIn("x must be >= 0", str(context.exception))
+
+    def test_y_nagative_value(self):
+        """tets for y negative value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(5, 10, 3, -4, 12)
+        self.assertIn("y must be >= 0", str(context.exception))
+
+    def test_width_zero_value(self):
+        """tets for width zero  value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(0, 10, 3, 4, 12)
+        self.assertIn("width must be > 0", str(context.exception))
+
+    def test_height_zero_value(self):
+        """tets for height negative value"""
+        with self.assertRaises(ValueError) as context:
+            r1 = Rectangle(5, 0, 3, 4, 12)
+        self.assertIn("height must be > 0", str(context.exception))
