@@ -87,8 +87,45 @@ class Rectangle(Base):
         """method to display rectangle instance with character #"""
         if self.width == 0 or self.height == 0:
             print("")
-        for _ in range(self.height):
-            print('#' * self.width)
+            return
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
+
+    def update(self, *args, **kwargs):
+        """
+        function that updates Rectangle class
+        Args:
+            1st argument should be the id attribute
+            2nd argument should be the width attribute
+            3rd argument should be the height attribute
+            4th argument should be the x attribute
+            5th argument should be the y attribute
+        """
+        if args:
+            self.id = args[0] if len(args) >= 1 else self.id
+            self.width = args[1] if len(args) >= 2 else self.width
+            self.height = args[2] if len(args) >= 3 else self.height
+            self.x = args[3] if len(args) >= 4 else self.x
+            self.y = args[4] if len(args) >= 5 else self.y
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+
+    def to_dictionary(self):
+        """return the dictionary reprentation of a rectangle"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
 
     def __str__(self):
         """
