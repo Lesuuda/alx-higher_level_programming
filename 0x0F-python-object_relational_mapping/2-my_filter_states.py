@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 lists all states from the database hbtn_0e_0_usa
-that has the same name as the 4th argument
+that start with 'N'
 """
 import MySQLdb
 import sys
