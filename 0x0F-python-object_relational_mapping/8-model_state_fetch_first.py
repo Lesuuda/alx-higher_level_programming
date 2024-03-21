@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""lists the first state in the databsase"""
 
 
 import sys
