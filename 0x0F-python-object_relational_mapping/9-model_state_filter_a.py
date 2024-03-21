@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""lists all states with the letter a"""
 
 
 import sys
