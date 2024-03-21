@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""state class that inherits from base"""
 
 
 from sqlalchemy import Column, String, Integer, MetaData
