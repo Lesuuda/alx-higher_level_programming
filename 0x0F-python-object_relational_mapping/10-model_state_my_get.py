@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""returns the state if of the state passed to it"""
 
 
 import sys
